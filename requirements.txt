@@ -1,0 +1,15 @@
+Flask
+flask-cors
+python-dotenv
+
+google-genai
+ollama
+
+pandas
+numpy
+xarray
+netCDF4
+scikit-learn
+
+requests
+pydantic

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ORCA — Marine Ecosystem Intelligence</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="topbar">
+
+        <div class="brand">
+            <div class="brand-mark">
+                <span>O</span>
+            </div>
+
+            <div class="brand-text">
+                <h1>ORCA</h1>
+                <p>Marine EcOsystem Reasoning with Collaborative Agents</p>
+            </div>
+        </div>
+
+        <div class="topbar-right">
+
+            <div class="data-badge">
+                <span class="pulse-dot"></span>
+                SYNTHETIC DEMO DATA
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="dashboard">
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span></span>
+                    ISRO SOFTWARE DEMONSTRATOR
+                </div>
+
+                <h2>
+                    Marine intelligence,
+                    <span>reasoned by agents.</span>
+                </h2>
+
+                <p>
+                    ORCA coordinates specialized AI agents to analyze
+                    marine, weather, satellite, and ecological evidence
+                    and transform it into explainable environmental intelligence.
+                </p>
+
+            </div>
+
+            <div class="hero-stat-panel">
+
+                <div class="hero-stat">
+                    <span>DATA RECORDS</span>
+                    <strong>5,000</strong>
+                </div>
+
+                <div class="hero-divider"></div>
+
+                <div class="hero-stat">
+                    <span>SPECIALIZED AGENTS</span>
+                    <strong>05</strong>
+                </div>
+
+                <div class="hero-divider"></div>
+
+                <div class="hero-stat">
+                    <span>COASTAL REGIONS</span>
+                    <strong>10</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUERY -->
+
+        <section class="query-section">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-tag">01 / QUERY</span>
+                    <h3>Ask ORCA</h3>
+                </div>
+
+                <span class="live-indicator">
+                    NATURAL LANGUAGE
+                </span>
+
+            </div>
+
+
+            <div class="query-box">
+
+                <div class="query-icon">
+                    ◈
+                </div>
+
+                <textarea
+                    id="query-input"
+                    placeholder="Ask about marine conditions, ecological risk, anomalies, weather, or a coastal region..."
+                    rows="3"
+                ></textarea>
+
+                <button id="query-button">
+                    <span>RUN ANALYSIS</span>
+                    <span class="button-arrow">→</span>
+                </button>
+
+            </div>
+
+
+            <div class="query-examples">
+
+                <span>TRY:</span>
+
+                <button class="example-query">
+                    Ecological risk in Sundarbans?
+                </button>
+
+                <button class="example-query">
+                    Analyze Chennai Coast.
+                </button>
+
+                <button class="example-query">
+                    Which regions show environmental stress?
+                </button>
+
+            </div>
+
+            <div id="query-status" class="query-status">
+                <span class="status-dot"></span>
+                ORCA READY FOR ANALYSIS
+            </div>
+
+        </section>
+
+
+        <!-- WORKSPACE -->
+
+        <section class="workspace">
+
+            <!-- COASTAL REGIONS -->
+
+            <div class="panel regions-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="section-tag">02 / SPATIAL INTELLIGENCE</span>
+                        <h3>Indian Coastal Regions</h3>
+                    </div>
+
+                    <span id="location-count" class="panel-count">
+                        10 REGIONS
+                    </span>
+
+                </div>
+
+
+                <div id="region-list" class="region-list">
+
+                    <div class="region-item">
+                        <div class="region-number">01</div>
+                        <div class="region-info">
+                            <strong>Sundarbans</strong>
+                            <span>West Bengal</span>
+                        </div>
+                        <div class="region-indicator"></div>
+                    </div>
+
+                    <div class="region-item">
+                        <div class="region-number">02</div>
+                        <div class="region-info">
+                            <strong>Odisha Coast</strong>
+                            <span>Odisha</span>
+                        </div>
+                        <div class="region-indicator"></div>
+                    </div>
+
+                    <div class="region-item">
+                        <div class="region-number">03</div>
+                        <div class="region-info">
+                            <strong>Visakhapatnam</strong>
+                            <span>Andhra Pradesh</span>
+                        </div>
+                        <div class="region-indicator"></div>
+                    </div>
+
+                    <div class="region-item">
+                        <div class="region-number">04</div>
+                        <div class="region-info">
+                            <strong>Chennai Coast</strong>
+                            <span>Tamil Nadu</span>
+                        </div>
+                        <div class="region-indicator"></div>
+                    </div>
+
+                    <div class="region-item">
+                        <div class="region-number">05</div>
+                        <div class="region-info">
+                            <strong>Kerala Coast</strong>
+                            <span>Kerala</span>
+                        </div>
+                        <div class="region-indicator"></div>
+                    </div>
+
+                    <div class="region-item">
+                        <div class="region-number">06</div>
+                        <div class="region-info">
+                            <strong>Mumbai Coast</strong>
+                            <span>Maharashtra</span>
+                        </div>
+                        <div class="region-indicator"></div>
+                    </div>
+
+                    <div class="region-item">
+                        <div class="region-number">07</div>
+                        <div class="region-info">
+                            <strong>Gujarat Coast</strong>
+                            <span>Gujarat</span>
+                        </div>
+                        <div class="region-indicator"></div>
+                    </div>
+
+                    <div class="region-item">
+                        <div class="region-number">08</div>
+                        <div class="region-info">
+                            <strong>Goa Coast</strong>
+                            <span>Goa</span>
+                        </div>
+                        <div class="region-indicator"></div>
+                    </div>
+
+                    <div class="region-item">
+                        <div class="region-number">09</div>
+                        <div class="region-info">
+                            <strong>Andaman & Nicobar</strong>
+                            <span>Andaman Sea</span>
+                        </div>
+                        <div class="region-indicator"></div>
+                    </div>
+
+                    <div class="region-item">
+                        <div class="region-number">10</div>
+                        <div class="region-info">
+                            <strong>Lakshadweep</strong>
+                            <span>Arabian Sea</span>
+                        </div>
+                        <div class="region-indicator"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AGENTS -->
+
+            <div class="panel agents-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="section-tag">03 / COLLABORATION</span>
+                        <h3>Agent Network</h3>
+                    </div>
+
+                    <span id="agent-status" class="panel-count">
+                        STANDBY
+                    </span>
+
+                </div>
+
+
+                <div class="agent-list">
+
+                    <div class="agent-card" id="agent-marine">
+
+                        <div class="agent-symbol">M</div>
+
+                        <div class="agent-content">
+                            <strong>Marine Agent</strong>
+                            <span>Oceanographic analysis</span>
+                        </div>
+
+                        <div class="agent-state">
+                            <i></i>
+                            READY
+                        </div>
+
+                    </div>
+
+
+                    <div class="agent-card" id="agent-weather">
+
+                        <div class="agent-symbol">W</div>
+
+                        <div class="agent-content">
+                            <strong>Weather Agent</strong>
+                            <span>Atmospheric analysis</span>
+                        </div>
+
+                        <div class="agent-state">
+                            <i></i>
+                            READY
+                        </div>
+
+                    </div>
+
+
+                    <div class="agent-card" id="agent-satellite">
+
+                        <div class="agent-symbol">S</div>
+
+                        <div class="agent-content">
+                            <strong>Satellite Agent</strong>
+                            <span>Spatial observations</span>
+                        </div>
+
+                        <div class="agent-state">
+                            <i></i>
+                            READY
+                        </div>
+
+                    </div>
+
+
+                    <div class="agent-card" id="agent-ecology">
+
+                        <div class="agent-symbol">E</div>
+
+                        <div class="agent-content">
+                            <strong>Ecology Agent</strong>
+                            <span>Ecosystem assessment</span>
+                        </div>
+
+                        <div class="agent-state">
+                            <i></i>
+                            READY
+                        </div>
+
+                    </div>
+
+
+                    <div class="agent-card" id="agent-reasoning">
+
+                        <div class="agent-symbol">R</div>
+
+                        <div class="agent-content">
+                            <strong>Reasoning Agent</strong>
+                            <span>Evidence fusion</span>
+                        </div>
+
+                        <div class="agent-state">
+                            <i></i>
+                            READY
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section class="results-section">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-tag">04 / INTELLIGENCE</span>
+                    <h3>Analysis Report</h3>
+                </div>
+
+                <span class="report-status">
+                    EVIDENCE GROUNDED
+                </span>
+
+            </div>
+
+
+            <div id="empty-result" class="empty-result">
+
+                <div class="empty-orbit">
+                    <span>O</span>
+                </div>
+
+                <h3>Awaiting intelligence request</h3>
+
+                <p>
+                    Submit a marine ecosystem query to activate
+                    the collaborative reasoning pipeline.
+                </p>
+
+            </div>
+
+
+            <div id="result-container" class="result-container hidden">
+
+                <div class="result-grid">
+
+                    <div class="answer-card">
+
+                        <span class="section-tag">
+                            ORCA ASSESSMENT
+                        </span>
+
+                        <h4>Environmental Intelligence</h4>
+
+                        <p id="result-answer"></p>
+
+                    </div>
+
+
+                    <div class="risk-card">
+
+                        <span class="section-tag">
+                            ECOLOGICAL RISK
+                        </span>
+
+                        <div id="risk-level" class="risk-level">
+                            UNKNOWN
+                        </div>
+
+                        <div class="risk-meter">
+                            <div id="risk-meter-fill"></div>
+                        </div>
+
+                        <div class="risk-score">
+                            RISK SCORE
+                            <strong id="risk-score">0.00</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-card">
+
+                    <div class="card-title">
+                        <span class="section-tag">KEY FINDINGS</span>
+                    </div>
+
+                    <ul id="findings-list"></ul>
+
+                </div>
+
+
+                <div class="report-card">
+
+                    <div class="card-title">
+                        <span class="section-tag">EVIDENCE TRAIL</span>
+                    </div>
+
+                    <div id="evidence-list"></div>
+
+                </div>
+
+
+                <div class="result-footer">
+
+                    <span>
+                        AGENTS
+                        <strong id="agents-used">—</strong>
+                    </span>
+
+                    <span>
+                        MODEL
+                        <strong id="model-used">—</strong>
+                    </span>
+
+                    <span>
+                        DATA MODE
+                        <strong>SYNTHETIC DEMO</strong>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div>
+            <strong>ORCA</strong>
+            <span>Marine EcOsystem Reasoning with Collaborative Agents</span>
+        </div>
+
+        <span>
+            SIH26176 · Prototype Demonstrator
+        </span>
+
+    </footer>
+
+
+    <script src="js/api.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

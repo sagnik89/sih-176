@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ORCA — Marine Intelligence Chat</title>
+
+    <!-- Keep the original ORCA palette/type system -->
+    <link rel="stylesheet" href="./css/style.css">
+
+        <link rel="stylesheet" href="./css/chat.css">
+
+</head>
+
+<body>
+    <div class="background-grid"></div>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="topbar">
+        <a href="/" class="brand" style="text-decoration:none;color:inherit;">
+            <div class="brand-mark">
+                <span>O</span>
+            </div>
+
+            <div class="brand-text">
+                <h1>ORCA</h1>
+                <p>Marine EcOsystem Reasoning with Collaborative Agents</p>
+            </div>
+        </a>
+
+        <div class="topbar-right">
+            <div class="data-badge">
+                <span class="pulse-dot"></span>
+                SYNTHETIC DEMO DATA
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </div>
+        </div>
+    </header>
+
+    <main class="chat-app">
+
+        <!-- Conversation navigation -->
+        <aside class="chat-sidebar">
+            <button class="new-chat" id="new-chat-button">
+                + &nbsp; NEW ANALYSIS
+            </button>
+
+            <div class="chat-history">
+                <div class="sidebar-label">CONVERSATION</div>
+
+                <div class="history-item active">
+                    Marine ecosystem assessment
+                </div>
+
+                <div class="history-item">
+                    Regional environmental conditions
+                </div>
+
+                <div class="history-item">
+                    Satellite &amp; ocean evidence
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <strong>ORCA</strong> / MULTI-AGENT<br>
+                Evidence-aware marine intelligence
+            </div>
+        </aside>
+
+        <!-- Chat -->
+        <section class="chat-main">
+
+            <header class="chat-header">
+                <div class="chat-title">
+                    <div class="chat-orb">O</div>
+                    <div>
+                        <h2>Marine Intelligence</h2>
+                        <p>ASK ORCA · EVIDENCE FUSED RESPONSES</p>
+                    </div>
+                </div>
+
+                <div class="chat-status">
+                    <span class="status-dot"></span>
+                    AGENTS READY
+                </div>
+            </header>
+
+            <div class="messages" id="messages">
+                <div class="welcome">
+                    <div class="welcome-kicker">02 / CHAT</div>
+
+                    <h1>
+                        Ask about the <span>ocean.</span>
+                    </h1>
+
+                    <p>
+                        Select a coastal region and ask ORCA about marine
+                        conditions, environmental risk, weather, satellite
+                        evidence, or ecological signals.
+                    </p>
+
+                    <div class="quick-prompts">
+                        <button class="quick-prompt" data-prompt="What are the current marine ecosystem conditions in this region?">
+                            Assess marine conditions
+                        </button>
+
+                        <button class="quick-prompt" data-prompt="What are the main ecological risks in this region?">
+                            Identify ecological risks
+                        </button>
+
+                        <button class="quick-prompt" data-prompt="Summarize the strongest environmental evidence for this region.">
+                            Summarize evidence
+                        </button>
+
+                        <button class="quick-prompt" data-prompt="Give me a concise environmental intelligence report for this region.">
+                            Generate a brief report
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="composer-wrap">
+                <div class="composer" id="composer">
+
+                    <div class="composer-top">
+                        <span class="location-label">LOCATION</span>
+
+                        <select id="location-select" aria-label="Select marine region">
+                            <option value="">All coastal regions</option>
+                        </select>
+                    </div>
+
+                    <div class="composer-body">
+                        <textarea
+                            id="chat-input"
+                            rows="1"
+                            placeholder="Ask ORCA about marine, weather, satellite, or ecological conditions..."
+                            autocomplete="off"
+                        ></textarea>
+
+                        <button id="send-button" aria-label="Send message" title="Send message">
+                            →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="composer-hint">
+                    ENTER TO SEND · SHIFT + ENTER FOR NEW LINE
+                </div>
+            </div>
+        </section>
+
+        <!-- Context / agent panel -->
+        <aside class="chat-inspector">
+            <div class="inspector-title">ANALYSIS CONTEXT</div>
+
+            <div class="context-card">
+                <span class="context-card-label">SELECTED REGION</span>
+                <strong id="selected-location-chip">All regions</strong>
+                <span>Location context applied to the next query.</span>
+            </div>
+
+            <div class="context-card">
+                <span class="context-card-label">DATA MODE</span>
+                <strong>SYNTHETIC DEMO</strong>
+                <span>ORCA project demonstration dataset.</span>
+            </div>
+
+            <div class="context-card">
+                <span class="context-card-label">REASONING</span>
+                <strong>Evidence fused</strong>
+                <span>Specialized agents contribute to the analysis.</span>
+            </div>
+
+            <div class="agent-mini-list">
+                <div class="sidebar-label">AGENT NETWORK</div>
+
+                <div class="agent-mini">
+                    <i class="agent-mini-dot"></i>
+                    <span>Marine Agent</span>
+                    <em>READY</em>
+                </div>
+
+                <div class="agent-mini">
+                    <i class="agent-mini-dot"></i>
+                    <span>Weather Agent</span>
+                    <em>READY</em>
+                </div>
+
+                <div class="agent-mini">
+                    <i class="agent-mini-dot"></i>
+                    <span>Satellite Agent</span>
+                    <em>READY</em>
+                </div>
+
+                <div class="agent-mini">
+                    <i class="agent-mini-dot"></i>
+                    <span>Ecology Agent</span>
+                    <em>READY</em>
+                </div>
+
+                <div class="agent-mini">
+                    <i class="agent-mini-dot"></i>
+                    <span>Reasoning Agent</span>
+                    <em>READY</em>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="api.js"></script>
+    <script src="chat.js"></script>
+
+    <script>
+        document.getElementById("new-chat-button")?.addEventListener("click", () => {
+            const messages = document.getElementById("messages");
+            messages.innerHTML = `
+                <div class="welcome">
+                    <div class="welcome-kicker">02 / CHAT</div>
+                    <h1>Ask about the <span>ocean.</span></h1>
+                    <p>
+                        Select a coastal region and ask ORCA about marine
+                        conditions, environmental risk, weather, satellite
+                        evidence, or ecological signals.
+                    </p>
+                    <div class="quick-prompts">
+                        <button class="quick-prompt" data-prompt="What are the current marine ecosystem conditions in this region?">Assess marine conditions</button>
+                        <button class="quick-prompt" data-prompt="What are the main ecological risks in this region?">Identify ecological risks</button>
+                        <button class="quick-prompt" data-prompt="Summarize the strongest environmental evidence for this region.">Summarize evidence</button>
+                        <button class="quick-prompt" data-prompt="Give me a concise environmental intelligence report for this region.">Generate a brief report</button>
+                    </div>
+                </div>
+            `;
+
+            messages.querySelectorAll("[data-prompt]").forEach(button => {
+                button.addEventListener("click", () => {
+                    const input = document.getElementById("chat-input");
+                    input.value = button.dataset.prompt || "";
+                    input.focus();
+                    input.dispatchEvent(new Event("input"));
+                });
+            });
+
+            document.getElementById("chat-input")?.focus();
+        });
+    </script>
+</body>
+</html>
